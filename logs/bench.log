@@ -1,0 +1,117 @@
+2023-09-20 20:25:56,995 DEBUG cd ims && python3 -m venv env
+2023-09-20 20:25:58,514 DEBUG cd ims && /home/shabi/Documents/ims/env/bin/python -m pip install --quiet --upgrade pip
+2023-09-20 20:26:00,640 DEBUG cd ims && /home/shabi/Documents/ims/env/bin/python -m pip install --quiet wheel
+2023-09-20 20:26:03,397 LOG Getting frappe
+2023-09-20 20:26:03,397 DEBUG cd ims/apps && git clone https://github.com/frappe/frappe.git --branch version-13 --depth 1 --origin upstream
+2023-09-20 20:26:11,029 LOG Installing frappe
+2023-09-20 20:26:11,030 DEBUG cd /home/shabi/Documents/ims && /home/shabi/Documents/ims/env/bin/python -m pip install --quiet --upgrade -e /home/shabi/Documents/ims/apps/frappe 
+2023-09-20 20:26:47,698 DEBUG cd /home/shabi/Documents/ims/apps/frappe && yarn install
+2023-09-20 20:27:54,702 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-09-20 20:27:54,703 DEBUG cd ims && bench build
+2023-09-20 20:27:54,782 INFO /usr/local/bin/bench build
+2023-09-20 20:28:51,315 LOG setting up backups
+2023-09-20 20:28:51,459 LOG backups were set up
+2023-09-20 20:28:51,460 INFO Bench ims initialized
+2023-09-20 20:31:05,499 INFO /usr/local/bin/bench new-site dcode.com
+2023-09-20 20:31:12,960 INFO /usr/local/bin/bench new-site ivm.com
+2023-09-20 20:34:32,913 INFO /usr/local/bin/bench get-app erpnext --branch version-13
+2023-09-20 20:34:33,576 LOG Getting erpnext
+2023-09-20 20:34:33,576 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-13 --depth 1 --origin upstream
+2023-09-20 20:34:43,893 LOG Installing erpnext
+2023-09-20 20:34:44,002 DEBUG cd /home/shabi/Documents/ims && /home/shabi/Documents/ims/env/bin/python -m pip install --quiet --upgrade -e /home/shabi/Documents/ims/apps/erpnext 
+2023-09-20 20:34:59,994 DEBUG cd /home/shabi/Documents/ims/apps/erpnext && yarn install
+2023-09-20 20:35:00,667 DEBUG bench build --app erpnext
+2023-09-20 20:35:00,742 INFO /usr/local/bin/bench build --app erpnext
+2023-09-20 20:35:16,284 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-09-20 20:43:33,690 INFO /usr/local/bin/bench --site ims.com install-app erpnext
+2023-09-20 20:46:47,378 INFO /usr/local/bin/bench --site ivm.com install-app erpnext
+2023-09-20 20:56:01,545 INFO /usr/local/bin/bench start
+2023-09-20 20:56:02,038 INFO /usr/local/bin/bench watch
+2023-09-20 20:56:02,039 INFO /usr/local/bin/bench worker
+2023-09-20 20:56:02,072 INFO /usr/local/bin/bench schedule
+2023-09-20 20:56:02,088 INFO /usr/local/bin/bench serve --port 8001
+2023-09-20 21:22:34,163 INFO /usr/local/bin/bench update
+2023-09-20 21:22:37,905 WARNING shallow_clone is set in your bench config.
+However without passing the --reset flag, your repositories will be unshallowed.
+To avoid this, cancel this operation and run `bench update --reset`.
+
+Consider the consequences of `git reset --hard` on your apps before you run that.
+To avoid seeing this warning, set shallow_clone to false in your common_site_config.json
+		
+2023-09-20 21:22:48,390 WARNING /usr/local/bin/bench update executed with exit code 1
+2023-09-20 21:24:05,650 INFO /usr/local/bin/bench start
+2023-09-20 21:24:05,939 INFO /usr/local/bin/bench schedule
+2023-09-20 21:24:05,965 INFO /usr/local/bin/bench serve --port 8001
+2023-09-20 21:24:05,978 INFO /usr/local/bin/bench worker
+2023-09-20 21:24:06,025 INFO /usr/local/bin/bench watch
+2023-09-20 21:24:41,977 INFO /usr/local/bin/bench serve --port 9090
+2023-09-20 21:25:55,584 INFO /usr/local/bin/bench new-site site1.local
+2023-09-20 21:29:20,213 INFO /usr/local/bin/bench use ivm.com
+2023-09-20 21:29:46,682 INFO /usr/local/bin/bench start
+2023-09-20 21:29:46,981 INFO /usr/local/bin/bench watch
+2023-09-20 21:29:47,017 INFO /usr/local/bin/bench schedule
+2023-09-20 21:29:47,050 INFO /usr/local/bin/bench serve --port 8001
+2023-09-20 21:29:47,055 INFO /usr/local/bin/bench worker
+2023-09-20 21:31:52,161 INFO /usr/local/bin/bench get-app erpnext --branch version-13
+2023-09-20 21:31:59,159 INFO App moved from apps/erpnext to archived/apps/erpnext-2023-09-20
+2023-09-20 21:31:59,163 LOG Getting erpnext
+2023-09-20 21:31:59,163 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-13 --depth 1 --origin upstream
+2023-09-20 21:32:08,692 LOG Installing erpnext
+2023-09-20 21:32:08,885 DEBUG cd /home/shabi/Documents/ims && /home/shabi/Documents/ims/env/bin/python -m pip install --quiet --upgrade -e /home/shabi/Documents/ims/apps/erpnext 
+2023-09-20 21:32:16,457 DEBUG cd /home/shabi/Documents/ims/apps/erpnext && yarn install
+2023-09-20 21:32:17,611 DEBUG bench build --app erpnext
+2023-09-20 21:32:17,708 INFO /usr/local/bin/bench build --app erpnext
+2023-09-20 21:32:32,957 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-09-20 21:33:57,807 INFO /usr/local/bin/bench --site ims.com install-app erpnext
+2023-09-20 21:34:44,823 INFO /usr/local/bin/bench --site ivm.com install-app erpnext
+2023-09-20 21:34:53,828 INFO /usr/local/bin/bench start
+2023-09-20 21:34:54,036 INFO /usr/local/bin/bench serve --port 8001
+2023-09-20 21:34:54,051 INFO /usr/local/bin/bench schedule
+2023-09-20 21:34:54,059 INFO /usr/local/bin/bench watch
+2023-09-20 21:34:54,072 INFO /usr/local/bin/bench worker
+2023-09-20 21:44:32,191 INFO /usr/local/bin/bench update
+2023-09-20 21:44:35,919 WARNING shallow_clone is set in your bench config.
+However without passing the --reset flag, your repositories will be unshallowed.
+To avoid this, cancel this operation and run `bench update --reset`.
+
+Consider the consequences of `git reset --hard` on your apps before you run that.
+To avoid seeing this warning, set shallow_clone to false in your common_site_config.json
+		
+2023-09-20 21:44:46,227 WARNING /usr/local/bin/bench update executed with exit code 1
+2023-09-20 21:44:54,512 INFO /usr/local/bin/bench start
+2023-09-20 21:44:54,705 INFO /usr/local/bin/bench watch
+2023-09-20 21:44:54,712 INFO /usr/local/bin/bench serve --port 8001
+2023-09-20 21:44:54,779 INFO /usr/local/bin/bench schedule
+2023-09-20 21:44:54,832 INFO /usr/local/bin/bench worker
+2023-09-20 22:14:23,620 INFO /usr/local/bin/bench --site site-name set-maintenance-mode off
+2023-09-20 22:14:31,970 INFO /usr/local/bin/bench --site ivm set-maintenance-mode off
+2023-09-20 22:14:47,168 INFO /usr/local/bin/bench --site ivm.com set-maintenance-mode off
+2023-09-21 14:16:54,916 INFO /usr/local/bin/bench start
+2023-09-21 14:16:57,604 INFO /usr/local/bin/bench watch
+2023-09-21 14:16:57,641 INFO /usr/local/bin/bench schedule
+2023-09-21 14:16:57,665 INFO /usr/local/bin/bench worker
+2023-09-21 14:16:57,733 INFO /usr/local/bin/bench serve --port 8001
+2023-09-21 18:00:01,628 INFO /usr/local/bin/bench --verbose --site all backup
+2023-09-21 21:18:25,917 INFO /usr/local/bin/bench set-config developer_mode1
+2023-09-21 21:18:38,975 INFO /usr/local/bin/bench set-config developer_mode 1
+2023-09-22 00:00:01,830 INFO /usr/local/bin/bench --verbose --site all backup
+2023-09-22 12:00:01,453 INFO /usr/local/bin/bench --verbose --site all backup
+2023-09-22 13:29:17,566 INFO /usr/local/bin/bench start
+2023-09-22 13:29:19,050 INFO /usr/local/bin/bench serve --port 8001
+2023-09-22 13:29:19,059 INFO /usr/local/bin/bench watch
+2023-09-22 13:29:19,097 INFO /usr/local/bin/bench schedule
+2023-09-22 13:29:19,112 INFO /usr/local/bin/bench worker
+2023-09-22 18:00:01,688 INFO /usr/local/bin/bench --verbose --site all backup
+2023-09-22 18:46:10,578 INFO /usr/local/bin/bench start
+2023-09-22 18:46:14,785 INFO /usr/local/bin/bench watch
+2023-09-22 18:46:14,790 INFO /usr/local/bin/bench serve --port 8001
+2023-09-22 18:46:14,792 INFO /usr/local/bin/bench worker
+2023-09-22 18:46:14,810 INFO /usr/local/bin/bench schedule
+2023-09-22 19:37:54,524 INFO /usr/local/bin/bench mariadb
+2023-09-23 06:00:02,203 INFO /usr/local/bin/bench --verbose --site all backup
+2023-09-23 22:45:27,319 INFO /usr/local/bin/bench start
+2023-09-23 22:45:28,605 INFO /usr/local/bin/bench schedule
+2023-09-23 22:45:28,632 INFO /usr/local/bin/bench serve --port 8001
+2023-09-23 22:45:28,649 INFO /usr/local/bin/bench worker
+2023-09-23 22:45:28,714 INFO /usr/local/bin/bench watch
+2023-09-24 00:00:02,128 INFO /usr/local/bin/bench --verbose --site all backup

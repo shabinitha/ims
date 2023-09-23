@@ -1,0 +1,220 @@
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Traceback (most recent call last):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 427, in read_from_socket
+    self.run()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/bench_helper.py", line 110, in <module>
+    main()
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/bench_helper.py", line 20, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/commands/scheduler.py", line 207, in start_worker
+    start_worker(queue, quiet=quiet)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/background_jobs.py", line 205, in start_worker
+    Worker(queues, name=get_worker_name(queue)).work(
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2023-09-21 15:05:57,504 Traceback (most recent call last):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/worker.py", line 1013, in perform_job
+    rv = job.perform()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/job.py", line 709, in perform
+    self._result = self._execute()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/job.py", line 732, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/background_jobs.py", line 147, in execute_job
+    retval = method(**kwargs)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/core/doctype/user/user.py", line 1124, in create_contact
+    contact.insert(
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/model/document.py", line 257, in insert
+    self._validate_links()
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/model/document.py", line 910, in _validate_links
+    frappe.throw(_("Could not find {0}").format(msg), frappe.LinkValidationError)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py", line 505, in throw
+    msgprint(
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py", line 480, in msgprint
+    _raise_exception()
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py", line 435, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.LinkValidationError: Could not find User Id: shabi@mailinator.com
+
+2023-09-21 15:05:58,681 Traceback (most recent call last):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/worker.py", line 1013, in perform_job
+    rv = job.perform()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/job.py", line 709, in perform
+    self._result = self._execute()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/job.py", line 732, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/background_jobs.py", line 147, in execute_job
+    retval = method(**kwargs)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/core/doctype/user/user.py", line 1124, in create_contact
+    contact.insert(
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/model/document.py", line 257, in insert
+    self._validate_links()
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/model/document.py", line 910, in _validate_links
+    frappe.throw(_("Could not find {0}").format(msg), frappe.LinkValidationError)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py", line 505, in throw
+    msgprint(
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py", line 480, in msgprint
+    _raise_exception()
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py", line 435, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.LinkValidationError: Could not find User Id: shabi@mailinator.com
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    Exception in thread return _run_code(code, main_globals, None,Thread-1
+:
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    exec(code, run_globals)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/bench_helper.py", line 110, in <module>
+    main()
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/bench_helper.py", line 20, in main
+    self.run()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/commands/scheduler.py", line 207, in start_worker
+    start_worker(queue, quiet=quiet)
+  File "/home/shabi/Documents/ims/apps/frappe/frappe/utils/background_jobs.py", line 205, in start_worker
+    Worker(queues, name=get_worker_name(queue)).work(
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    self.register_death()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/shabi/Documents/ims/env/lib/python3.8/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')

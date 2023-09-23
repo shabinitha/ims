@@ -1,0 +1,3 @@
+2023-09-22 13:57:37,527 ERROR frappe New Exception collected with id: 2023-09-22 13:57:37.476006-127.0.0.1-714
+Site: ivm.com
+Form Dict: {'recipients': 'ims@mailinator.com', 'subject': 'Stock Settings (#Stock Settings)', 'content': '<div class="ql-editor read-mode"><p><br></p></div>', 'doctype': 'Stock Settings', 'name': 'Stock Settings', 'send_email': '1', 'print_html': '', 'send_me_a_copy': '1', 'print_format': 'Standard', 'attachments': '[]', '_lang': 'en-GB', 'read_receipt': '1', 'print_letterhead': '1', 'cmd': 'frappe.core.doctype.communication.email.make'}

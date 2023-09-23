@@ -1,0 +1,264 @@
+2023-09-20 20:56:03,029 Worker rq:worker:d4689835736e4322b93eb2381cd058e1: started, version 1.8.1
+2023-09-20 20:56:03,029 Subscribing to channel rq:pubsub:d4689835736e4322b93eb2381cd058e1
+2023-09-20 20:56:03,030 *** Listening on short, default, long...
+2023-09-20 20:56:03,030 Cleaning registries for queue: short
+2023-09-20 20:56:03,031 Cleaning registries for queue: default
+2023-09-20 20:56:03,031 Cleaning registries for queue: long
+2023-09-20 21:22:46,080 Warm shut down requested
+2023-09-20 21:22:46,081 Unsubscribing from channel rq:pubsub:d4689835736e4322b93eb2381cd058e1
+2023-09-20 21:24:06,909 Worker rq:worker:7f1b323753304f0f9c31c0a6fcb48da3: started, version 1.8.1
+2023-09-20 21:24:06,909 Subscribing to channel rq:pubsub:7f1b323753304f0f9c31c0a6fcb48da3
+2023-09-20 21:24:06,910 *** Listening on short, default, long...
+2023-09-20 21:24:06,910 Cleaning registries for queue: short
+2023-09-20 21:24:06,911 Cleaning registries for queue: default
+2023-09-20 21:24:06,911 Cleaning registries for queue: long
+2023-09-20 21:24:39,477 Warm shut down requested
+2023-09-20 21:29:48,047 Worker rq:worker:7f04ad12ea20439eb39aa9ecc88a597c: started, version 1.8.1
+2023-09-20 21:29:48,047 Subscribing to channel rq:pubsub:7f04ad12ea20439eb39aa9ecc88a597c
+2023-09-20 21:29:48,048 *** Listening on short, default, long...
+2023-09-20 21:29:48,048 Cleaning registries for queue: short
+2023-09-20 21:29:48,049 Cleaning registries for queue: default
+2023-09-20 21:29:48,049 Cleaning registries for queue: long
+2023-09-20 21:31:22,195 Warm shut down requested
+2023-09-20 21:31:22,202 Unsubscribing from channel rq:pubsub:7f04ad12ea20439eb39aa9ecc88a597c
+2023-09-20 21:34:54,858 Worker rq:worker:8a15d3300d1e43b9967c6d5cd6aa0adc: started, version 1.8.1
+2023-09-20 21:34:54,858 Subscribing to channel rq:pubsub:8a15d3300d1e43b9967c6d5cd6aa0adc
+2023-09-20 21:34:54,859 *** Listening on short, default, long...
+2023-09-20 21:34:54,859 Cleaning registries for queue: short
+2023-09-20 21:34:54,860 Cleaning registries for queue: default
+2023-09-20 21:34:54,860 Cleaning registries for queue: long
+2023-09-20 21:44:26,246 Warm shut down requested
+2023-09-20 21:44:26,247 Unsubscribing from channel rq:pubsub:8a15d3300d1e43b9967c6d5cd6aa0adc
+2023-09-20 21:44:55,628 Worker rq:worker:bdd13b95e9ec47f0b4213770c37edb5c: started, version 1.8.1
+2023-09-20 21:44:55,629 Subscribing to channel rq:pubsub:bdd13b95e9ec47f0b4213770c37edb5c
+2023-09-20 21:44:55,636 *** Listening on short, default, long...
+2023-09-20 21:44:55,637 Cleaning registries for queue: short
+2023-09-20 21:44:55,638 Cleaning registries for queue: default
+2023-09-20 21:44:55,638 Cleaning registries for queue: long
+2023-09-20 22:11:55,681 Cleaning registries for queue: short
+2023-09-20 22:11:55,683 Cleaning registries for queue: default
+2023-09-20 22:11:55,684 Cleaning registries for queue: long
+2023-09-20 22:38:56,024 Cleaning registries for queue: short
+2023-09-20 22:38:56,025 Cleaning registries for queue: default
+2023-09-20 22:38:56,026 Cleaning registries for queue: long
+2023-09-20 23:05:56,386 Cleaning registries for queue: short
+2023-09-20 23:05:56,387 Cleaning registries for queue: default
+2023-09-20 23:05:56,388 Cleaning registries for queue: long
+2023-09-20 23:32:56,711 Cleaning registries for queue: short
+2023-09-20 23:32:56,712 Cleaning registries for queue: default
+2023-09-20 23:32:56,713 Cleaning registries for queue: long
+2023-09-21 14:17:03,019 Worker rq:worker:ad7a554aeac94c828bd03ebdc02054bb: started, version 1.8.1
+2023-09-21 14:17:03,751 Subscribing to channel rq:pubsub:ad7a554aeac94c828bd03ebdc02054bb
+2023-09-21 14:17:03,753 *** Listening on short, default, long...
+2023-09-21 14:17:03,754 Cleaning registries for queue: short
+2023-09-21 14:17:03,755 Cleaning registries for queue: default
+2023-09-21 14:17:03,755 Cleaning registries for queue: long
+2023-09-21 14:44:03,942 Cleaning registries for queue: short
+2023-09-21 14:44:03,987 Cleaning registries for queue: default
+2023-09-21 14:44:03,988 Cleaning registries for queue: long
+2023-09-21 15:05:50,692 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: shabi@mailinator.com>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='ivm.com', user='Administrator') (ee3e06bb-efa0-44bf-bf28-0f25bddf4227)
+Traceback (most recent call last):
+  File "apps/frappe/frappe/utils/background_jobs.py", line 147, in execute_job
+    retval = method(**kwargs)
+  File "apps/frappe/frappe/core/doctype/user/user.py", line 1124, in create_contact
+    contact.insert(
+  File "apps/frappe/frappe/model/document.py", line 257, in insert
+    self._validate_links()
+  File "apps/frappe/frappe/model/document.py", line 910, in _validate_links
+    frappe.throw(_("Could not find {0}").format(msg), frappe.LinkValidationError)
+  File "apps/frappe/frappe/__init__.py", line 505, in throw
+    msgprint(
+  File "apps/frappe/frappe/__init__.py", line 480, in msgprint
+    _raise_exception()
+  File "apps/frappe/frappe/__init__.py", line 435, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.LinkValidationError: Could not find User Id: shabi@mailinator.com
+
+2023-09-21 15:05:57,529 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.update_gravatar', kwargs={'name': 'shabi@mailinator.com'}, method='frappe.core.doctype.user.user.update_gravatar', site='ivm.com', user='Administrator') (c00d716a-3e94-4f97-9238-9bfb64ab6b0a)
+2023-09-21 15:05:58,311 default: Job OK (c00d716a-3e94-4f97-9238-9bfb64ab6b0a)
+2023-09-21 15:05:58,311 Result is kept for 600 seconds
+2023-09-21 15:05:58,321 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: shabi@mailinator.com>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='ivm.com', user='Administrator') (c7089f4e-86ea-4e9c-86e1-983fbfdba755)
+Traceback (most recent call last):
+  File "apps/frappe/frappe/utils/background_jobs.py", line 147, in execute_job
+    retval = method(**kwargs)
+  File "apps/frappe/frappe/core/doctype/user/user.py", line 1124, in create_contact
+    contact.insert(
+  File "apps/frappe/frappe/model/document.py", line 257, in insert
+    self._validate_links()
+  File "apps/frappe/frappe/model/document.py", line 910, in _validate_links
+    frappe.throw(_("Could not find {0}").format(msg), frappe.LinkValidationError)
+  File "apps/frappe/frappe/__init__.py", line 505, in throw
+    msgprint(
+  File "apps/frappe/frappe/__init__.py", line 480, in msgprint
+    _raise_exception()
+  File "apps/frappe/frappe/__init__.py", line 435, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.LinkValidationError: Could not find User Id: shabi@mailinator.com
+
+2023-09-21 15:05:58,690 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.update_gravatar', kwargs={'name': 'shabi@mailinator.com'}, method='frappe.core.doctype.user.user.update_gravatar', site='ivm.com', user='Administrator') (ebcfca94-b665-4245-83c2-ed04cf95a2be)
+2023-09-21 15:05:58,922 default: Job OK (ebcfca94-b665-4245-83c2-ed04cf95a2be)
+2023-09-21 15:05:58,922 Result is kept for 600 seconds
+2023-09-21 15:06:32,632 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='erpnext.regional.india.setup.add_hsn_sac_codes', kwargs={}, method='erpnext.regional.india.setup.add_hsn_sac_codes', site='ivm.com', user='Administrator') (f37242a0-5e92-4b42-8c78-7a8d58bea726)
+2023-09-21 15:06:43,630 default: Job OK (f37242a0-5e92-4b42-8c78-7a8d58bea726)
+2023-09-21 15:06:43,630 Result is kept for 600 seconds
+2023-09-21 15:06:43,641 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='ivm.com', user='Administrator') (6cf5cfe1-340c-4a6a-b375-82db7309704d)
+2023-09-21 15:06:43,816 default: Job OK (6cf5cfe1-340c-4a6a-b375-82db7309704d)
+2023-09-21 15:06:43,816 Result is kept for 600 seconds
+2023-09-21 15:06:43,821 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='ivm.com', user='Administrator') (47cf8300-0708-428f-9344-c04484d388d6)
+2023-09-21 15:06:43,954 default: Job OK (47cf8300-0708-428f-9344-c04484d388d6)
+2023-09-21 15:06:43,955 Result is kept for 600 seconds
+2023-09-21 15:06:44,404 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='ivm.com', user='Administrator') (00d5650d-f2d6-46e0-8f1f-74c4a3b43ad7)
+2023-09-21 15:06:44,578 default: Job OK (00d5650d-f2d6-46e0-8f1f-74c4a3b43ad7)
+2023-09-21 15:06:44,578 Result is kept for 600 seconds
+2023-09-21 15:06:49,759 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='ivm.com', user='Administrator') (252fb01e-c776-44f6-9e50-9e518f630c90)
+2023-09-21 15:06:49,887 default: Job OK (252fb01e-c776-44f6-9e50-9e518f630c90)
+2023-09-21 15:06:49,887 Result is kept for 600 seconds
+2023-09-21 15:06:51,337 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='<function update_index_for_path at 0x7f42db73ca60>', kwargs={'path': 'blog/general'}, method=<function update_index_for_path at 0x7f42db73ca60>, site='ivm.com', user='Administrator') (ffc52986-dab6-46b4-a61d-65a50a08df00)
+2023-09-21 15:06:56,344 default: Job OK (ffc52986-dab6-46b4-a61d-65a50a08df00)
+2023-09-21 15:06:56,344 Result is kept for 600 seconds
+2023-09-21 15:06:56,349 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='<function update_index_for_path at 0x7f42db73ca60>', kwargs={'path': 'blog/general/welcome'}, method=<function update_index_for_path at 0x7f42db73ca60>, site='ivm.com', user='Administrator') (9d54c84d-bbb6-4949-9b92-66934adaa7b8)
+2023-09-21 15:06:58,184 default: Job OK (9d54c84d-bbb6-4949-9b92-66934adaa7b8)
+2023-09-21 15:06:58,184 Result is kept for 600 seconds
+2023-09-21 15:13:43,226 Cleaning registries for queue: short
+2023-09-21 15:13:43,228 Cleaning registries for queue: default
+2023-09-21 15:13:43,229 Cleaning registries for queue: long
+2023-09-21 15:40:43,556 Cleaning registries for queue: short
+2023-09-21 15:40:43,558 Cleaning registries for queue: default
+2023-09-21 15:40:43,560 Cleaning registries for queue: long
+2023-09-21 16:07:43,838 Cleaning registries for queue: short
+2023-09-21 16:07:43,840 Cleaning registries for queue: default
+2023-09-21 16:07:43,841 Cleaning registries for queue: long
+2023-09-21 16:34:44,116 Cleaning registries for queue: short
+2023-09-21 16:34:44,117 Cleaning registries for queue: default
+2023-09-21 16:34:44,118 Cleaning registries for queue: long
+2023-09-21 17:01:44,327 Cleaning registries for queue: short
+2023-09-21 17:01:44,331 Cleaning registries for queue: default
+2023-09-21 17:01:44,332 Cleaning registries for queue: long
+2023-09-21 17:28:44,531 Cleaning registries for queue: short
+2023-09-21 17:28:44,569 Cleaning registries for queue: default
+2023-09-21 17:28:44,570 Cleaning registries for queue: long
+2023-09-21 17:55:44,761 Cleaning registries for queue: short
+2023-09-21 17:55:44,763 Cleaning registries for queue: default
+2023-09-21 17:55:44,764 Cleaning registries for queue: long
+2023-09-21 18:22:45,043 Cleaning registries for queue: short
+2023-09-21 18:22:45,046 Cleaning registries for queue: default
+2023-09-21 18:22:45,046 Cleaning registries for queue: long
+2023-09-21 18:49:45,304 Cleaning registries for queue: short
+2023-09-21 18:49:45,305 Cleaning registries for queue: default
+2023-09-21 18:49:45,306 Cleaning registries for queue: long
+2023-09-21 19:16:45,567 Cleaning registries for queue: short
+2023-09-21 19:16:45,569 Cleaning registries for queue: default
+2023-09-21 19:16:45,570 Cleaning registries for queue: long
+2023-09-21 19:43:45,771 Cleaning registries for queue: short
+2023-09-21 19:43:45,773 Cleaning registries for queue: default
+2023-09-21 19:43:45,775 Cleaning registries for queue: long
+2023-09-21 20:10:46,015 Cleaning registries for queue: short
+2023-09-21 20:10:46,016 Cleaning registries for queue: default
+2023-09-21 20:10:46,017 Cleaning registries for queue: long
+2023-09-21 20:37:46,115 Cleaning registries for queue: short
+2023-09-21 20:37:46,117 Cleaning registries for queue: default
+2023-09-21 20:37:46,119 Cleaning registries for queue: long
+2023-09-21 21:04:46,236 Cleaning registries for queue: short
+2023-09-21 21:04:46,237 Cleaning registries for queue: default
+2023-09-21 21:04:46,238 Cleaning registries for queue: long
+2023-09-21 21:17:37,029 Warm shut down requested
+2023-09-21 21:17:37,035 Unsubscribing from channel rq:pubsub:ad7a554aeac94c828bd03ebdc02054bb
+2023-09-22 13:29:20,200 Worker rq:worker:c075500ba71e4ec8bc77838415473119: started, version 1.8.1
+2023-09-22 13:29:20,931 Subscribing to channel rq:pubsub:c075500ba71e4ec8bc77838415473119
+2023-09-22 13:29:20,934 *** Listening on short, default, long...
+2023-09-22 13:29:20,935 Cleaning registries for queue: short
+2023-09-22 13:29:20,936 Cleaning registries for queue: default
+2023-09-22 13:29:20,937 Cleaning registries for queue: long
+2023-09-22 13:56:21,217 Cleaning registries for queue: short
+2023-09-22 13:56:21,218 Cleaning registries for queue: default
+2023-09-22 13:56:21,221 Cleaning registries for queue: long
+2023-09-22 13:57:28,410 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='ivm.com', user='Administrator') (70d57d27-5267-4b4d-891f-f9e6e133fe98)
+2023-09-22 13:57:28,841 default: Job OK (70d57d27-5267-4b4d-891f-f9e6e133fe98)
+2023-09-22 13:57:28,841 Result is kept for 600 seconds
+2023-09-22 13:58:16,368 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.desk.doctype.notification_log.notification_log.make_notification_lo..., kwargs={'doc': {'type': 'Assignment', 'document_type': 'Stock Settings', 'subject'..., method='frappe.desk.doctype.notification_log.notification_log.make_notification_lo..., site='ivm.com', user='Administrator') (17645927-7499-4e0f-9333-2c20bc43d924)
+2023-09-22 13:58:16,908 default: Job OK (17645927-7499-4e0f-9333-2c20bc43d924)
+2023-09-22 13:58:16,908 Result is kept for 600 seconds
+2023-09-22 14:11:46,041 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.desk.doctype.notification_log.notification_log.make_notification_lo..., kwargs={'doc': {'type': 'Assignment', 'document_type': 'Material Request', 'subjec..., method='frappe.desk.doctype.notification_log.notification_log.make_notification_lo..., site='ivm.com', user='Administrator') (8f1b64f3-f5b1-4b2b-b84f-41975144e0fc)
+2023-09-22 14:11:46,379 default: Job OK (8f1b64f3-f5b1-4b2b-b84f-41975144e0fc)
+2023-09-22 14:11:46,379 Result is kept for 600 seconds
+2023-09-22 14:11:46,384 Cleaning registries for queue: short
+2023-09-22 14:11:46,385 Cleaning registries for queue: default
+2023-09-22 14:11:46,385 Cleaning registries for queue: long
+2023-09-22 14:38:46,632 Cleaning registries for queue: short
+2023-09-22 14:38:46,635 Cleaning registries for queue: default
+2023-09-22 14:38:46,636 Cleaning registries for queue: long
+2023-09-22 15:05:46,893 Cleaning registries for queue: short
+2023-09-22 15:05:46,894 Cleaning registries for queue: default
+2023-09-22 15:05:46,896 Cleaning registries for queue: long
+2023-09-22 15:32:47,157 Cleaning registries for queue: short
+2023-09-22 15:32:47,166 Cleaning registries for queue: default
+2023-09-22 15:32:47,167 Cleaning registries for queue: long
+2023-09-22 15:59:47,482 Cleaning registries for queue: short
+2023-09-22 15:59:47,496 Cleaning registries for queue: default
+2023-09-22 15:59:47,497 Cleaning registries for queue: long
+2023-09-22 16:20:50,976 Cleaning registries for queue: short
+2023-09-22 16:20:50,982 Cleaning registries for queue: default
+2023-09-22 16:20:50,982 Cleaning registries for queue: long
+2023-09-22 16:47:51,293 Cleaning registries for queue: short
+2023-09-22 16:47:51,294 Cleaning registries for queue: default
+2023-09-22 16:47:51,295 Cleaning registries for queue: long
+2023-09-22 17:14:51,540 Cleaning registries for queue: short
+2023-09-22 17:14:51,542 Cleaning registries for queue: default
+2023-09-22 17:14:51,543 Cleaning registries for queue: long
+2023-09-22 17:41:51,808 Cleaning registries for queue: short
+2023-09-22 17:41:51,809 Cleaning registries for queue: default
+2023-09-22 17:41:51,810 Cleaning registries for queue: long
+2023-09-22 18:08:51,906 Cleaning registries for queue: short
+2023-09-22 18:08:51,934 Cleaning registries for queue: default
+2023-09-22 18:08:51,935 Cleaning registries for queue: long
+2023-09-22 18:35:52,122 Cleaning registries for queue: short
+2023-09-22 18:35:52,149 Cleaning registries for queue: default
+2023-09-22 18:35:52,151 Cleaning registries for queue: long
+2023-09-22 18:46:06,974 Warm shut down requested
+2023-09-22 18:46:17,688 Worker rq:worker:5fc3a50dd4e0419c82263fb08bbdb9c0: started, version 1.8.1
+2023-09-22 18:46:17,688 Subscribing to channel rq:pubsub:5fc3a50dd4e0419c82263fb08bbdb9c0
+2023-09-22 18:46:17,689 *** Listening on short, default, long...
+2023-09-22 18:46:17,690 Cleaning registries for queue: short
+2023-09-22 18:46:17,690 Cleaning registries for queue: default
+2023-09-22 18:46:17,690 Cleaning registries for queue: long
+2023-09-22 18:56:47,024 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='<function run_background at 0x7fb2bdded430>', kwargs={'prepared_report': 'REP00001'}, method=<function run_background at 0x7fb2bdded430>, site='ivm.com', user='Administrator') (2b757359-8a4e-49cb-b219-a6051aad7fa1)
+2023-09-22 18:56:48,677 default: Job OK (2b757359-8a4e-49cb-b219-a6051aad7fa1)
+2023-09-22 18:56:48,677 Result is kept for 600 seconds
+2023-09-22 19:10:18,787 Cleaning registries for queue: short
+2023-09-22 19:10:18,789 Cleaning registries for queue: default
+2023-09-22 19:10:18,790 Cleaning registries for queue: long
+2023-09-22 19:37:18,913 Cleaning registries for queue: short
+2023-09-22 19:37:18,915 Cleaning registries for queue: default
+2023-09-22 19:37:18,916 Cleaning registries for queue: long
+2023-09-22 20:04:19,006 Cleaning registries for queue: short
+2023-09-22 20:04:19,008 Cleaning registries for queue: default
+2023-09-22 20:04:19,009 Cleaning registries for queue: long
+2023-09-22 23:50:22,074 Cleaning registries for queue: short
+2023-09-22 23:50:22,077 Cleaning registries for queue: default
+2023-09-22 23:50:22,078 Cleaning registries for queue: long
+2023-09-23 22:45:32,739 Worker rq:worker:133ea7e4f90d4cf4af3fbd2562e1c27c: started, version 1.8.1
+2023-09-23 22:45:33,292 Subscribing to channel rq:pubsub:133ea7e4f90d4cf4af3fbd2562e1c27c
+2023-09-23 22:45:33,293 *** Listening on short, default, long...
+2023-09-23 22:45:33,294 Cleaning registries for queue: short
+2023-09-23 22:45:33,294 Cleaning registries for queue: default
+2023-09-23 22:45:33,294 Cleaning registries for queue: long
+2023-09-23 22:49:23,684 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='<function run_background at 0x7f1ad162e670>', kwargs={'prepared_report': 'REP00002'}, method=<function run_background at 0x7f1ad162e670>, site='ivm.com', user='Administrator') (19164c60-4ed1-4347-bb74-5dde670eb8fc)
+2023-09-23 22:49:24,381 default: Job OK (19164c60-4ed1-4347-bb74-5dde670eb8fc)
+2023-09-23 22:49:24,381 Result is kept for 600 seconds
+2023-09-23 23:09:39,479 Cleaning registries for queue: short
+2023-09-23 23:09:39,481 Cleaning registries for queue: default
+2023-09-23 23:09:39,482 Cleaning registries for queue: long
+2023-09-23 23:24:30,967 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='<function run_background at 0x7f1ad162e670>', kwargs={'prepared_report': 'REP00003'}, method=<function run_background at 0x7f1ad162e670>, site='ivm.com', user='Administrator') (5bc2b26d-f632-4ece-b5cf-e2228d72cdfa)
+2023-09-23 23:24:31,942 default: Job OK (5bc2b26d-f632-4ece-b5cf-e2228d72cdfa)
+2023-09-23 23:24:31,943 Result is kept for 600 seconds
+2023-09-23 23:36:15,535 default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='<function run_background at 0x7f1ad162e670>', kwargs={'prepared_report': 'REP00004'}, method=<function run_background at 0x7f1ad162e670>, site='ivm.com', user='Administrator') (5532d39a-2548-46e3-9d1c-e7ea3a7c03ae)
+2023-09-23 23:36:16,020 default: Job OK (5532d39a-2548-46e3-9d1c-e7ea3a7c03ae)
+2023-09-23 23:36:16,020 Result is kept for 600 seconds
+2023-09-23 23:36:16,023 Cleaning registries for queue: short
+2023-09-23 23:36:16,023 Cleaning registries for queue: default
+2023-09-23 23:36:16,024 Cleaning registries for queue: long
+2023-09-24 00:03:16,190 Cleaning registries for queue: short
+2023-09-24 00:03:16,192 Cleaning registries for queue: default
+2023-09-24 00:03:16,193 Cleaning registries for queue: long
+2023-09-24 00:10:18,268 Warm shut down requested
+2023-09-24 00:10:18,277 Unsubscribing from channel rq:pubsub:133ea7e4f90d4cf4af3fbd2562e1c27c

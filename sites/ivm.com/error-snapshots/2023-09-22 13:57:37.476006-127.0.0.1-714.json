@@ -1,0 +1,391 @@
+{
+ "etype": "OutgoingEmailError",
+ "evalue": "OutgoingEmailError('Please setup default Email Account from Setup > Email > Email Account')",
+ "exception": {
+  "args": [
+   40,
+   39,
+   80,
+   108,
+   101,
+   97,
+   115,
+   101,
+   32,
+   115,
+   101,
+   116,
+   117,
+   112,
+   32,
+   100,
+   101,
+   102,
+   97,
+   117,
+   108,
+   116,
+   32,
+   69,
+   109,
+   97,
+   105,
+   108,
+   32,
+   65,
+   99,
+   99,
+   111,
+   117,
+   110,
+   116,
+   32,
+   102,
+   114,
+   111,
+   109,
+   32,
+   83,
+   101,
+   116,
+   117,
+   112,
+   32,
+   62,
+   32,
+   69,
+   109,
+   97,
+   105,
+   108,
+   32,
+   62,
+   32,
+   69,
+   109,
+   97,
+   105,
+   108,
+   32,
+   65,
+   99,
+   99,
+   111,
+   117,
+   110,
+   116,
+   39,
+   44,
+   41
+  ],
+  "http_status_code": [
+   53,
+   48,
+   49
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   79,
+   117,
+   116,
+   103,
+   111,
+   105,
+   110,
+   103,
+   69,
+   109,
+   97,
+   105,
+   108,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://localhost:8001/api/method/frappe.core.doctype.communication.email.make' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/shabi/Documents/ims/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "64": "",
+    "65": "\t\telif request.path.startswith(\"/api/\"):",
+    "66": "\t\t\tresponse = frappe.api.handle()",
+    "67": "",
+    "68": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 66
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/shabi/Documents/ims/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.core.doctype.communication.email.make'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "36": "",
+    "37": "\tif cmd != \"login\":",
+    "38": "\t\tdata = execute_cmd(cmd)",
+    "39": "",
+    "40": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 38
+  },
+  {
+   "call": "(cmd='frappe.core.doctype.communication.email.make', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'recipients': 'ims@mailinator.com', 'subject': ...: 'frappe.core.doctype.communication.email.make'}",
+    "global frappe": "<module 'frappe' from '/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py'>",
+    "method": "<function make>"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "74": "\t\tis_valid_http_method(method)",
+    "75": "",
+    "76": "\treturn frappe.call(method, **frappe.form_dict)",
+    "77": "",
+    "78": ""
+   },
+   "lnum": 76
+  },
+  {
+   "call": "(fn=<function make>, *args=(), **kwargs={'_lang': 'en-GB', 'attachments': '[]', 'cmd': 'frappe.core.doctype.communication.email.make', 'content': '<div class=\"ql-editor read-mode\"><p><br></p></div>', 'doctype': 'Stock Settings', 'name': 'Stock Settings', 'print_format': 'Standard', 'print_html': '', 'print_letterhead': '1', 'read_receipt': '1', ...})",
+   "dump": {
+    "args": "()",
+    "fn": "<function make>",
+    "newargs": "{'_lang': 'en-GB', 'attachments': '[]', 'cmd': 'frappe.core.doctype.communication.email.make', 'content': '<div class=\"ql-editor read-mode\"><p><br></p></div>', 'doctype': 'Stock Settings', 'name': 'Stock Settings', 'print_format': 'Standard', 'print_html': '', 'print_letterhead': '1', 'read_receipt': '1', ...}"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1472": "\tnewargs = get_newargs(fn, kwargs)",
+    "1473": "",
+    "1474": "\treturn fn(*args, **newargs)",
+    "1475": "",
+    "1476": ""
+   },
+   "lnum": 1474
+  },
+  {
+   "call": "(doctype='Stock Settings', name='Stock Settings', content='<div class=\"ql-editor read-mode\"><p><br></p></div>', subject='Stock Settings (#Stock Settings)', sent_or_received='Sent', sender=None, sender_full_name=None, recipients='ims@mailinator.com', communication_medium='Email', send_email='1', print_html='', print_format='Standard', attachments='[]', send_me_a_copy='1', cc=None, bcc=None, read_receipt='1', print_letterhead='1', email_template=None, communication_type=None, **kwargs={'_lang': 'en-GB', 'cmd': 'frappe.core.doctype.communication.email.make'})",
+   "dump": {
+    "add_signature": "undefined",
+    "attachments": "'[]'",
+    "bcc": "None",
+    "cc": "None",
+    "communication_medium": "'Email'",
+    "communication_type": "None",
+    "content": "'<div class=\"ql-editor read-mode\"><p><br></p></div>'",
+    "doctype": "'Stock Settings'",
+    "email_template": "None",
+    "global _make": "<function _make>",
+    "global cint": "<function cint>",
+    "name": "'Stock Settings'",
+    "print_format": "'Standard'",
+    "print_html": "''",
+    "print_letterhead": "'1'",
+    "read_receipt": "'1'",
+    "recipients": "'ims@mailinator.com'",
+    "send_email": "'1'",
+    "send_me_a_copy": "'1'",
+    "sender": "None",
+    "sender_full_name": "None",
+    "sent_or_received": "'Sent'",
+    "subject": "'Stock Settings (#Stock Settings)'"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/core/doctype/communication/email.py",
+   "func": "make",
+   "lines": {
+    "83": "\t\traise frappe.PermissionError(f\"You are not allowed to send emails related to: {doctype} {name}\")",
+    "84": "",
+    "85": "\treturn _make(",
+    "86": "\t\tdoctype=doctype,",
+    "87": "\t\tname=name,"
+   },
+   "lnum": 85
+  },
+  {
+   "call": "(doctype='Stock Settings', name='Stock Settings', content='<div class=\"ql-editor read-mode\"><p><br></p></div>', subject='Stock Settings (#Stock Settings)', sent_or_received='Sent', sender='Administrator <admin@example.com>', sender_full_name=None, recipients='ims@mailinator.com', communication_medium='Email', send_email='1', print_html='', print_format='Standard', attachments=[], send_me_a_copy=1, cc=None, bcc=None, read_receipt=1, print_letterhead='1', email_template=None, communication_type=None, add_signature=False)",
+   "dump": {
+    "append_to": "undefined",
+    "comm": "<Communication: c526563c55>",
+    "comm. doctype": "'Communication'",
+    "comm. sender": "'admin@example.com'",
+    "frappe. email": "<module 'frappe.email' from '/home/shabi/Documents/ims/apps/frappe/frappe/email/__init__.py'>",
+    "frappe.email. smtp": "<module 'frappe.email.smtp' from '/home/shabi/Documents/ims/apps/frappe/frappe/email/smtp.py'>",
+    "frappe.email.smtp. get_outgoing_email_account": "<function get_outgoing_email_account>",
+    "global _": "<function _>",
+    "global frappe": "<module 'frappe' from '/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py'>",
+    "sender": "'Administrator <admin@example.com>'"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/core/doctype/communication/email.py",
+   "func": "_make",
+   "lines": {
+    "171": "\tif cint(send_email):",
+    "172": "\t\t# Raise error if outgoing email account is missing",
+    "173": "\t\t_ = frappe.email.smtp.get_outgoing_email_account(append_to=comm.doctype, sender=comm.sender)",
+    "174": "\t\tfrappe.flags.print_letterhead = cint(print_letterhead)",
+    "175": "\t\tcomm.send(print_html, print_format, attachments, send_me_a_copy=send_me_a_copy)"
+   },
+   "lnum": 173
+  },
+  {
+   "call": "(raise_exception_not_set=True, append_to='Communication', sender='admin@example.com')",
+   "dump": {
+    "frappe. OutgoingEmailError": "<class 'frappe.exceptions.OutgoingEmailError'>",
+    "frappe. throw": "<function throw>",
+    "global _": "<function _>",
+    "global frappe": "<module 'frappe' from '/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/email/smtp.py",
+   "func": "get_outgoing_email_account",
+   "lines": {
+    "76": "\t\t\tand cint(frappe.db.get_single_value(\"System Settings\", \"setup_complete\"))",
+    "77": "\t\t):",
+    "78": "\t\t\tfrappe.throw(",
+    "79": "\t\t\t\t_(\"Please setup default Email Account from Setup > Email > Email Account\"),",
+    "80": "\t\t\t\tfrappe.OutgoingEmailError,"
+   },
+   "lnum": 78
+  },
+  {
+   "call": "(msg='Please setup default Email Account from Setup > Email > Email Account', exc=<class 'frappe.exceptions.OutgoingEmailError'>, title=None, is_minimizable=None, wide=None, as_list=False)",
+   "dump": {
+    "as_list": "False",
+    "exc": "<class 'frappe.exceptions.OutgoingEmailError'>",
+    "global msgprint": "<function msgprint>",
+    "indicator": "undefined",
+    "is_minimizable": "None",
+    "msg": "'Please setup default Email Account from Setup > Email > Email Account'",
+    "raise_exception": "undefined",
+    "title": "None",
+    "wide": "None"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py",
+   "func": "throw",
+   "lines": {
+    "503": "\t:param msg: Message.",
+    "504": "\t:param exc: Exception class. Default `frappe.ValidationError`\"\"\"",
+    "505": "\tmsgprint(",
+    "506": "\t\tmsg,",
+    "507": "\t\traise_exception=exc,"
+   },
+   "lnum": 505
+  },
+  {
+   "call": "(msg='Please setup default Email Account from Setup > Email > Email Account', title=None, raise_exception=<class 'frappe.exceptions.OutgoingEmailError'>, as_table=False, as_list=False, indicator='red', alert=False, primary_action=None, is_minimizable=None, wide=None)",
+   "dump": {
+    "_raise_exception": "<function msgprint.<locals>._raise_exception>"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py",
+   "func": "msgprint",
+   "lines": {
+    "478": "\t\tlocal.response[\"exc_type\"] = raise_exception.__name__",
+    "479": "",
+    "480": "\t_raise_exception()",
+    "481": "",
+    "482": ""
+   },
+   "lnum": 480
+  },
+  {
+   "call": "()",
+   "dump": {
+    "msg": "'Please setup default Email Account from Setup > Email > Email Account'",
+    "raise_exception": "<class 'frappe.exceptions.OutgoingEmailError'>"
+   },
+   "file": "/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py",
+   "func": "_raise_exception",
+   "lines": {
+    "433": "",
+    "434": "\t\t\tif inspect.isclass(raise_exception) and issubclass(raise_exception, Exception):",
+    "435": "\t\t\t\traise raise_exception(msg)",
+    "436": "\t\t\telse:",
+    "437": "\t\t\t\traise ValidationError(msg)"
+   },
+   "lnum": 435
+  }
+ ],
+ "locals": {
+  "inspect": "<module 'inspect' from '/usr/lib/python3.8/inspect.py'>",
+  "msg": "Please setup default Email Account from Setup > Email > Email Account",
+  "raise_exception": "<class 'frappe.exceptions.OutgoingEmailError'>"
+ },
+ "pyver": "Python 3.8.10: /home/shabi/Documents/ims/env/bin/python (prefix: /home/shabi/Documents/ims/env)",
+ "timestamp": "2023-09-22 13:57:37.476156",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/app.py\", line 66, in application\n    response = frappe.api.handle()\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/handler.py\", line 38, in handle\n    data = execute_cmd(cmd)\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/handler.py\", line 76, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py\", line 1474, in call\n    return fn(*args, **newargs)\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/core/doctype/communication/email.py\", line 85, in make\n    return _make(\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/core/doctype/communication/email.py\", line 173, in _make\n    _ = frappe.email.smtp.get_outgoing_email_account(append_to=comm.doctype, sender=comm.sender)\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/email/smtp.py\", line 78, in get_outgoing_email_account\n    frappe.throw(\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py\", line 505, in throw\n    msgprint(\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py\", line 480, in msgprint\n    _raise_exception()\n  File \"/home/shabi/Documents/ims/apps/frappe/frappe/__init__.py\", line 435, in _raise_exception\n    raise raise_exception(msg)\nfrappe.exceptions.OutgoingEmailError: Please setup default Email Account from Setup > Email > Email Account\n"
+}
